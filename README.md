@@ -171,7 +171,7 @@ money (which of them has a lower unit price). You must use the function you wrot
 ```python
 import math
 def calcPricePizza(diameter, price,name):
-    areaPizza = math.pi * diameter * diameter
+    areaPizza = math.pi * diameter/2 * diameter/2
     print("The price per square meter of pizza",name,f": {price / (areaPizza * 0.0001):.3f}")
     return price / (areaPizza * 0.0001)
 dia1 = float(input("Input the diameter of pizza 1 in cm: "))
@@ -187,11 +187,11 @@ else:
 ```
 Output console:
 ```
-Input the diameter of pizza 1 in cm: 10
-Input the price of pizza 1 in euro: 2
-Input the diameter of pizza 2 in cm: 10
-Input the price of pizza 2 in euro: 3
-The price per square meter of pizza 1 : 63.662
+Input the diameter of pizza 1 in cm: 40
+Input the price of pizza 1 in euro: 10
+Input the diameter of pizza 2 in cm: 40
+Input the price of pizza 2 in euro: 12
+The price per square meter of pizza 1 : 79.577
 The price per square meter of pizza 2 : 95.493
 Pizza 1 is cheaper than pizza 2
 ```
